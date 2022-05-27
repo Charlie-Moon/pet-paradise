@@ -1,0 +1,26 @@
+
+
+// Custom font
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nokora:wght@400;700&family=Nunito:wght@400;700&display=swap');
+
+// Variable overrides second
+$primary: #3490d5;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+$font-family-sans-serif: system-ui, -apple-system,"Nunito", "Nokora", "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-bold: "Merriweather", "Nokora", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$enable-shadows: true;
+$prefix: "bs-";
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import 'custom';
+@import 'header';

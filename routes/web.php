@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Web\ContactController;
+use App\Http\Controllers\Web\HomeController;
+use App\Http\Controllers\Web\PostController;
+use App\Http\Controllers\Web\PageController;
+use App\Http\Controllers\Web\ProductController;
+use App\Http\Controllers\Web\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +19,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+Route::get('/', [HomeController::class, 'index']); 
+Route::get('/contact', [ContactController::class, 'index']);
+Route::get('/page/{slug}', [PageController::class, 'index']);
+Route::get('/search', [SearchController::class, 'index']);
+
+
+Route::get('/services', [PostController::class, 'index']);
+Route::get('/services/{slug}', [PostController::class, 'detail']);
+
+
+Route::get('/products', [ProductController::class, 'index']);
+Route::get('/products/{slug}', [ProductController::class, 'detail']);
+
+
+
 
 
 Route::group(['prefix' => 'admin'], function () {
